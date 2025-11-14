@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// ✅ Your projects list used directly here
 const PROJECTS = [
   {
     title: "EngineersHub",
@@ -52,31 +51,36 @@ const Project = () => {
       >
         {PROJECTS.map((project, index) => (
           <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
-
-            {/* Removed broken image section */}
-
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: 100 }}
               transition={{ duration: 0.8, delay: 0.5 }}
               className="w-full max-w-xl lg:w-3/4"
             >
-              <h6 className="mb-2 font-semibold">
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                  {project.title}
-                </a>
-              </h6>
+              <h6 className="mb-2 font-semibold">{project.title}</h6>
 
-              <p className="mb-4 text-neutral-350">{project.description}</p>
+              <p className="mb-2 text-neutral-350">{project.description}</p>
 
-              {project.technologies.map((tech, index) => (
-                <span
-                  key={index}
-                  className="mr-2 rounded bg-neutral-800 px-2 py-1 text-sm font-medium"
-                >
-                  {tech}
-                </span>
-              ))}
+              {/* 💙 Clear Visible Clickable Link */}
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 underline text-sm"
+              >
+                🔗 Visit Project
+              </a>
+
+              <div className="mt-3">
+                {project.technologies.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="mr-2 rounded bg-neutral-800 px-2 py-1 text-sm font-medium"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </motion.div>
           </div>
         ))}

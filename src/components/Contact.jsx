@@ -13,7 +13,10 @@ const Contact = () => {
       >
         Contact Us
       </motion.h1>
+
       <div className="text-center tracking-tighter">
+
+        {/* Address */}
         <motion.p
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
@@ -22,23 +25,29 @@ const Contact = () => {
         >
           {CONTACT.address}
         </motion.p>
-        <motion.p
+
+        {/* Clickable Phone */}
+        <motion.a
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="my-4"
+          href={`tel:${CONTACT.phoneNo}`}
+          className="my-4 block text-blue-400 underline"
         >
           {CONTACT.phoneNo}
-        </motion.p>
+        </motion.a>
+
+        {/* Clickable Email */}
         <motion.a
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 100 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          href="#"
-          className="border-b"
+          href={`mailto:${CONTACT.email}`}
+          className="text-blue-400 underline"
         >
           {CONTACT.email}
         </motion.a>
+
       </div>
     </div>
   );

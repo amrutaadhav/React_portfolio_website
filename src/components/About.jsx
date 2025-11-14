@@ -22,49 +22,43 @@ const About = () => {
         Education <span className="text-neutral-500">Details</span>
       </motion.h1>
 
-      <div className="flex flex-wrap">
-        
+      <div className="flex flex-col items-center text-center">
+
         {/* Current College */}
-        <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -100 }}
+        <motion.p
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="w-full lg:w-1/2 lg:p-8"
+          className="my-4 max-w-2xl py-2"
         >
-          <div className="flex justify-center lg:justify-start">
-            <p className="my-4 max-w-xl py-2">
-              <strong>B.E. in Computer Engineering</strong> <br />
-              Bhivarabai Sawant Institute of Technology and Research, Wagholi <br />
-              <strong>SGPA:</strong> 9.27 (Till 4th Semester)
-            </p>
-          </div>
-        </motion.div>
+          <strong>B.E. in Computer Engineering</strong> <br />
+          Bhivarabai Sawant Institute of Technology and Research, Wagholi, Pune <br />
+          <strong>SGPA:</strong> 9.27 (Till 4th Semester)
+        </motion.p>
 
-        {/* 12th & 10th */}
-        <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: 100 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="w-full lg:w-1/2"
+        {/* 12th */}
+        <motion.p
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="my-4 max-w-2xl py-2"
         >
-          <div className="flex justify-center lg:justify-start">
-            <div className="my-2 py-2 max-w-xl tracking-tight space-y-6">
+          <strong>HSC (Science)</strong> <br />
+          Rasiklal M. Dharival English Medium School & Junior College, Katraj Kondhawa road, Pune <br />
+          <strong>Percentage:</strong> 74.33%
+        </motion.p>
 
-              <p>
-                <strong>HSC (Science)</strong> <br />
-                Rasiklal M. Dharival English Medium School & Junior College, Karmala <br />
-                <strong>Percentage:</strong> 74.33%
-              </p>
-
-              <p>
-                <strong>SSC</strong> <br />
-                Shri Kamladevi Kanya Vidyalay, Karmala <br />
-                <strong>Percentage:</strong> 92.40%
-              </p>
-
-            </div>
-          </div>
-        </motion.div>
+        {/* 10th */}
+        <motion.p
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="my-4 max-w-2xl py-2"
+        >
+          <strong>SSC</strong> <br />
+          Shri Kamladevi Kanya Vidyalay, Karmala <br />
+          <strong>Percentage:</strong> 92.40%
+        </motion.p>
 
       </div>
     </div>
